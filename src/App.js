@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 import Date from "./components/Date";
 
-
 const api = {
   key: "8158e038a2aa2aa19731c07c7f67f9fc",
   base: "http://api.openweathermap.org/data/2.5/",
@@ -26,14 +25,15 @@ function App() {
 
   return (
     <div
-      // className={
-      //   typeof weather.main != "undefined"
-      //     ? weather.main.temp > 15
-      //       ? "App warm"
-      //       : "App"
-      //     : "App"
-      // }
+      className={
+        typeof weather.main != "undefined"
+          ? weather.main.temp > 15
+            ? "App warm"
+            : "App"
+          : "App"
+      }
     >
+    
       <main>
         <div className="search-box">
           <input
@@ -43,7 +43,7 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
-          />
+          ></input>
         </div>
         {typeof weather.main != "undefined" ? (
           <div>
@@ -52,7 +52,7 @@ function App() {
                 {weather.name}, {weather.sys.country}
               </div>
             </div>
-            {/*<Date />*/}
+            <Date />
             <div className="weather-box">
               <div className="temp">{Math.floor(weather.main.temp)}°C</div>
               <div className="weather">{weather.weather[0].main}</div>
