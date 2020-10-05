@@ -52,7 +52,7 @@ function App() {
                 {weather.name}, {weather.sys.country}
               </div>
             </div>
-            <Date />
+            {/*<Date />*/}
             <div className="weather-box">
               <div className="temp">{Math.floor(weather.main.temp)}°C</div>
               <div className="weather">{weather.weather[0].main}</div>
