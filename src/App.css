@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+    sans-serif;
+}
+
+.App {
+  background-image: url("./assets/cold-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+}
+
+.App.warm {
+  background-image: url("./assets/warm-bg.jpg");
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.75)
+  );
+  padding: 25px;
+}
+
+.search-box {
+  width: 100%;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  appearance: none;
+  background: none;
+  outline: none;
+
+  background-image: linear-gradient(
+    to right,
+    #dcdcdc,
+    #d5ddee,
+    #bde3fe,
+    #97eaff,
+    #6ef2fa
+  );
+  opacity: 60%;
+  border-radius: 0 0 15px 15px;
+  margin-top: -15px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+
+  color: #313131;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+  background-image: linear-gradient(
+    to right,
+    #fcfafa,
+    #e1ebff,
+    #d6e7f3,
+    #c9eff8,
+    #87f6fc
+  );
+  opacity: 90%;
+}
+
+
+.location-box .location {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  padding-top: 60px;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 25px ;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+
+  padding: 15px 20px;
+
+  color: white;
+  font-size: 100px;
+  font-weight: 800;
+  text-shadow: 3px 6px rgba(133, 133, 133, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather {
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+
+
+@media (min-width: 680px) {
+  .App {
+    background-position: center;
+  }
+
+  .search-box .search-bar {
+    margin: auto;
+    width: 60%;
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .weather-box {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}

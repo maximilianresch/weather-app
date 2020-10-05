@@ -1,0 +1,8 @@
+.date {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    opacity: 70%;
+    padding: 8px 0  60px 0;
+    font-weight: 500;
+}
