@@ -11,16 +11,14 @@ const api = {
 function App() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
-  const [list, setList] = useState([]);
 
   const search = (e) => {
     if (e.key === "Enter") {
-      fetch(`${api.base}forecast?q=${query}&units=metric&APPID=${api.key}`)
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then((res) => res.json())
         .then((result) => {
           setQuery("");
           setWeather(result);
-          setList(result);
           console.log(result);
         });
     }
@@ -56,7 +54,7 @@ function App() {
             </div>
             <Date />
             <div className="weather-box">
-              <div className="temp">{Math.floor(list.main.temp)}°C</div>
+              <div className="temp">{Math.floor(weather.main.temp)}°C</div>
               <div className="weather">{weather.weather[0].main}</div>
             </div>
           </div>
