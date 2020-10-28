@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+// build as FC and get the current time from location with timezone (UTC)
+
 class currentDate extends React.Component {
   constructor(props) {
     super(props);

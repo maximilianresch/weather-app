@@ -43,6 +43,8 @@ main {
   background: none;
   outline: none;
 
+  list-style-type: none;
+
   background-image: linear-gradient(
     to right,
     #dcdcdc,
@@ -111,6 +113,14 @@ main {
   font-weight: 600;
   text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+.feels-like {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 

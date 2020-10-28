@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Date from "./components/Date";
+//import Date from "./components/Date";
 
 const api = {
   key: "8158e038a2aa2aa19731c07c7f67f9fc",
@@ -33,9 +33,9 @@ function App() {
           : "App"
       }
     >
-    
       <main>
         <div className="search-box">
+        {/* create new input with geosuggest or google autocomplete */}
           <input
             type="text"
             className="search-bar"
@@ -43,7 +43,8 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
-          ></input>
+            
+          />
         </div>
         {typeof weather.main != "undefined" ? (
           <div>
@@ -52,10 +53,12 @@ function App() {
                 {weather.name}, {weather.sys.country}
               </div>
             </div>
-            <Date />
+            
+            {/* <Date /> */}
             <div className="weather-box">
               <div className="temp">{Math.floor(weather.main.temp)}°C</div>
-              <div className="weather">{weather.weather[0].main}</div>
+              {/* <div className="feels-like">Feels like {weather.main.feels_like}</div> */}
+              <div className="weather">{weather.weather[0].description}</div>
             </div>
           </div>
         ) : (
