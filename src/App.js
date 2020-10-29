@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
+import config from './config';
 //import Date from "./components/Date";
 
+const apiKey = config.WEATHERAPI_KEY
+
 const api = {
-  key: "8158e038a2aa2aa19731c07c7f67f9fc",
+  key: apiKey,
   base: "http://api.openweathermap.org/data/2.5/",
 };
 
