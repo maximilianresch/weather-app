@@ -7,7 +7,7 @@ const apiKey = config.WEATHERAPI_KEY
 
 const api = {
   key: apiKey,
-  base: "http://api.openweathermap.org/data/2.5/",
+  base: "https://api.openweathermap.org/data/2.5/",
 };
 
 function App() {
